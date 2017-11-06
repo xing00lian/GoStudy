@@ -2,9 +2,9 @@
  
  http Get/Post/Delete/Put
   Get 查询
-  Post 提交(更新，非幂等)
+  Post 提交(更新，非幂等;use create)
   Delete 删除
-  Put 提交(幂等：提交多次，执行效果相同，例如：发送两个帖子，如果产生两条记录->非幂等，只产生一条记录->幂等)
+  Put 提交(幂等：提交多次，执行效果相同，例如：发送两个帖子，如果产生两条记录->非幂等，只产生一条记录->幂等;use create and update)
  
  func MyHandler(w http.ResponseWriter, r *http.Request) {}
  
