@@ -1,0 +1,38 @@
+结构体 struct 认知
+type MyStruct struct {
+	field int
+}
+
+func (ms *MyStruct) Set1() {
+	fmt.Println(unsafe.Pointer(ms)
+	ms.field = 2
+}
+
+func (ms MyStruct) Set2() {
+	fmt.Println(unsafe.Pointer(ms)	
+	ms.field = 3
+}
+
+func main() {
+	ms := MyStruct{1}
+	fmt.Println(unsafe.Pointer(ms))
+	
+	ms.Set1()
+	fmt.Println(ms.field)
+	
+	ms.Set2()
+	fmt.Println(ms.field)
+}
+
+结果：
+0xc420075230
+0xc420075230
+2
+0xc420075238
+2
+
+结论：结构体是值传递，指针是引用传递；通过 unsafe.Pointer(ms) 打印指针地址
+	
+	
+	
+	
