@@ -1,0 +1,40 @@
+import "reflect"
+
+反射基础类型
+func BaseReflect() {
+  var i = 10
+  fmt.Println(reflect.TypeOf(i))
+  fmt.Println(reflect.ValueOf(i))
+}
+
+OutPut
+int
+10
+
+结论：反射能直接获取基础类型的变量定义和变量值
+
+反射结构体
+type Content struct {
+  Id int
+}
+
+func StructReflect() {
+  ct := Content{Id: 10}
+  
+  fmt.Println(reflect.TypeOf(ct))
+  fmt.Println(reflect.ValueOf(ct))
+  fmt.Println(reflect.TypeOf(ct).NumField())
+  for i := 0; i<reflect.TypeOf(ct).NumField(); i++ {
+    fmt.Println(reflect.TypeOf(ct).Field(i).Name)
+    fmt.Println(reflect.TypeOf(ct).Field(i).Type)
+    fmt.Println(reflect.ValueOf(ct).Field(i).Interface()
+  }
+}
+
+OutPut
+main.Content
+{10}
+2   // 返回 main.Content 包含的结构体 field 个数
+Id
+int
+10
