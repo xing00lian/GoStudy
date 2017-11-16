@@ -1,2 +1,6 @@
-http://www.flysnow.org/2016/12/24/golang-http-proxy.html  飞雪无情的博客，介绍许多 golang 相关知识
-  http://www.flysnow.org/2016/12/27/golang-hot-project-in-github.html github 上优秀的Go开源项目
+# Golang
+  http://www.flysnow.org/2016/12/24/golang-http-proxy.html  飞雪无情的博客，介绍许多 golang 相关知识
+    http://www.flysnow.org/2016/12/27/golang-hot-project-in-github.html github 上优秀的Go开源项目
+
+# MQ 
+  http://dbaplus.cn/news-21-1123-1.html   RocketMQ 解决顺序和重复的问题，“恰好”不解决
