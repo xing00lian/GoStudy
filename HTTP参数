@@ -1,4 +1,4 @@
- go 获取http Get/Post 请求参数
+ go 获取HTTP Get/Post 请求参数
  
  http Get/Post/Delete/Put
   Get 查询
