@@ -22,3 +22,12 @@ kafka 和 RocketMQ 原理上相似
 理论上，MQ是支持 partition 级别的顺序的，业务可以通过一些特征字段保证顺序
 例如：
   订单的创建、完成和付费，可以通过 hash(id) 的方式，保证相同订单在同一个 partition，同时也能保证不同订单之间的并发。
+
+kafka：消息重复消费、消息顺序性
+  High Level(group 概念)
+  a.客户端不需要记录offset，全部内容托管给zk
+  b.同一个group内，消息不会被重复消费(客户端关闭瞬间没有提交offset到zk的情况排除)
+  c.一个group可以订阅多个topic
+  Low Level
+  a.客户端自己管理offset和partition消费leader，好处是可以任意消费任何一个partition的任意段数据
+  b.客户端需要自己做partition的balance，记录offset的值(offset频繁情况，可以写在内容，隔段时间/到达固定数值的情况下写一次)
