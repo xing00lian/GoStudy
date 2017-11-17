@@ -4,3 +4,7 @@
 
 # MQ 
   http://dbaplus.cn/news-21-1123-1.html   RocketMQ 解决顺序和重复的问题，“恰好”不解决
+
+# 延迟队列
+  https://tech.youzan.com/queuing_delay/ 延迟队列原理说明(有赞延迟队列设计)
+  https://github.com/ouqiang/delay-queue.git 基于有赞延迟设计的 go 版本实现，代码内容简单(包括 Job元、Timer、Bucket、ReadyQ)
