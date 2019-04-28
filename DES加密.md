@@ -1,4 +1,3 @@
 DES全称为Data Encryption Standard，即数据加密标准
 
-CBC(cipher block chaining)的原理是加密算法的輸入是當前的明文分組和前一密文分組的異或，第一個明文分組和一個初始向量進行異或，這樣同一個明文分組重複出現時會產生不同的密文分組。 
-特點：同一個明文分組重複出現時產生不同的密文分組；加密函數的輸入是當前的明文分組和前一個密文分組的異或；每個明文分組的加密函數的輸入與明文分組之間不再有固定的關係；適合加密長消息。 
+![https://github.com/xing00lian/getter/blob/master/pic/cbc.png]
